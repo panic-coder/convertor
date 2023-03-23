@@ -4,6 +4,7 @@ const options = [
   { value: "km", name: "kilometre" },
   { value: "m", name: "metre" },
   { value: "cm", name: "centimetre" },
+  { value: "mm", name: "millimetre" },
 ];
 let inputValue = 1;
 let first: any = "km";
@@ -46,10 +47,16 @@ class Convertor extends Component<MyProps, MyState> {
     let formula: any = {
       kmTom: 1000,
       kmTocm: 100000,
+      kmTomm: 1000000,
       mTokm: 0.001,
       mTocm: 100,
+      mTomm: 1000,
       cmTokm: 0.00001,
       cmTom: 0.01,
+      cmTomm: 10,
+      mmToKm: 0.000001,
+      mmTom: 0.001,
+      mmTocm: 0.1,
     };
     console.log("On calculate", inputValue);
     console.log("first ", first);
